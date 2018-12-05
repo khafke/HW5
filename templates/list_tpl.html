@@ -11,6 +11,9 @@
 {% for item in items %}
     <li>
         {{ item.description }} - Priority: {{ item.priority }} 
+        <form action="/update/{{ item.description }}" method="POST">
+        	{{ form.item }}
+        	{{ form.submit() }}
     </li>
 {% endfor %}
 </ul>
